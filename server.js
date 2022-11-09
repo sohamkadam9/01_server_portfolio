@@ -1,12 +1,12 @@
 const express = require('express');
 
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 4000;
 
 app.get('/', (req, res) => {
-	res.send('hello');
+	res.send('Working fine');
 });
 
 app.listen(PORT, () => {
-	console.log('Server started');
+	console.log(`Server started at ${PORT}`);
 });
